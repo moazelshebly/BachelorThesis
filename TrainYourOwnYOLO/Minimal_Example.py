@@ -26,23 +26,10 @@ if not os.path.exists(output_folder):
 download_script = os.path.join(model_folder, "Download_Weights.py")
 
 if not os.path.isfile(os.path.join(model_folder, "trained_weights_final.h5")):
-    print("\n", "Downloading Pretrained Weights", "\n")
-    start = time.time()
-    call_string = " ".join(
-        [
-            "python",
-            download_script,
-            "1MGXAP_XD_w4OExPP10UHsejWrMww8Tu7",
-            os.path.join(model_folder, "trained_weights_final.h5"),
-        ]
-    )
+    print("\n", "Please download the pretrained weights first. Information on how to do so is available on https://github.com/moazelshebly/BachelorThesis/tree/master/TrainYourOwnYOLO", "\n")
+    sys.exit()
 
-    subprocess.call(call_string, shell=True)
-
-    end = time.time()
-    print("Downloaded Pretrained Weights in {0:.1f} seconds".format(end - start), "\n")
-
-# Now run the cat face detector
+# Now run the trash detector
 detector_script = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "3_Inference", "Detector.py"
 )
@@ -66,8 +53,8 @@ arglist = [
 ]
 call_string = " ".join(["python", detector_script, make_call_string(arglist)])
 
-print("Detecting Cat Faces by calling: \n\n", call_string, "\n")
+print("Detecting trash by calling: \n\n", call_string, "\n")
 start = time.time()
 subprocess.call(call_string, shell=True)
 end = time.time()
-print("Detected Cat Faces in {0:.1f} seconds".format(end - start))
+print("Detected trash in {0:.1f} seconds".format(end - start))
