@@ -6,21 +6,21 @@ This repo let's you train a custom image detector using the state-of-the-art [YO
 
 To build and test your YOLO object detection algorithm follow the below steps:
 
- 1. [Image Annotation](/1_Image_Annotation/)
+ 1. [Image Annotation](/TrainYourOwnYOLO/1_Image_Annotation/)
 	 - Install Microsoft's Visual Object Tagging Tool (VoTT)
 	 - Annotate images
- 2. [Training](/2_Training/)
+ 2. [Training](/TrainYourOwnYOLO/2_Training/)
  	- Download pre-trained weights
  	- Train your custom YOLO model on annotated images 
- 3. [Inference](/3_Inference/)
+ 3. [Inference](/TrainYourOwnYOLO/3_Inference/)
  	- Detect objects in new images and videos
 
 ## Repo structure
-+ [`1_Image_Annotation`](/1_Image_Annotation/): Scripts and instructions on annotating images
-+ [`2_Training`](/2_Training/): Scripts and instructions on training your YOLOv3 model
-+ [`3_Inference`](/3_Inference/): Scripts and instructions on testing your trained YOLO model on new images and videos
-+ [`Data`](/Data/): Input Data, Output Data, Model Weights and Results
-+ [`Utils`](/Utils/): Utility scripts used by main scripts
++ [`1_Image_Annotation`](/TrainYourOwnYOLO/1_Image_Annotation/): Scripts and instructions on annotating images
++ [`2_Training`](/TrainYourOwnYOLO/2_Training/): Scripts and instructions on training your YOLOv3 model
++ [`3_Inference`](/TrainYourOwnYOLO/3_Inference/): Scripts and instructions on testing your trained YOLO model on new images and videos
++ [`Data`](/TrainYourOwnYOLO/Data/): Input Data, Output Data, Model Weights and Results
++ [`Utils`](/TrainYourOwnYOLO/Utils/): Utility scripts used by main scripts
 
 ## Getting Started
 
@@ -42,8 +42,8 @@ To speed up training, it is recommended to use a **GPU with CUDA** support. For 
 
 Clone this repo with:
 ```
-git clone https://github.com/AntonMu/TrainYourOwnYOLO
-cd TrainYourOwnYOLO/
+git clone https://github.com/moazelshebly/BachelorThesis
+cd BachelorThesis/TrainYourOwnYOLO
 ```
 Create Virtual **(Linux/Mac)** Environment:
 ```
@@ -61,7 +61,7 @@ Create Virtual **(Windows)** Environment:
 py -m venv env
 .\env\Scripts\activate
 ```
-![PowerShell](/Utils/Screenshots/PowerShell.png)
+![PowerShell](/TrainYourOwnYOLO/Utils/Screenshots/PowerShell.png)
 Make sure that, from now on, you **run all commands from within your virtual environment**.
 
 #### Install Required Packages [Windows, Mac or Linux]
@@ -73,24 +73,24 @@ pip install -r requirements.txt
 If this fails, you may have to upgrade your pip version first with `pip install pip --upgrade`.
 
 ## Quick Start (Inference only)
-To test the cat face detector on test images located in [`TrainYourOwnYOLO/Data/Source_Images/Test_Images`](/Data/Source_Images/Test_Images) run the `Minimal_Example.py` script in the root folder with:
+To test the trash detector on test images located in [`TrainYourOwnYOLO/Data/Source_Images/Test_Images`](/Data/Source_Images/Test_Images) run the `Minimal_Example.py` script in the root folder with:
 
 ```
 python Minimal_Example.py
 ```
 
 The outputs are saved in [`TrainYourOwnYOLO/Data/Source_Images/Test_Image_Detection_Results`](/Data/Source_Images/Test_Image_Detection_Results). This includes:
- - Cat pictures with bounding boxes around faces with confidence scores and
- - [`Detection_Results.csv`](/Data/Source_Images/Test_Image_Detection_Results/Detection_Results.csv) file with file names and locations of bounding boxes.
+ - Trash pictures with bounding boxes around objects with confidence scores and
+ - [`Detection_Results.csv`](/TrainYourOwnYOLO/Data/Source_Images/Test_Image_Detection_Results/Detection_Results.csv) file with file names and locations of bounding boxes.
 
- If you want to detect cat faces in your own pictures, replace the cat images in [`Data/Source_Images/Test_Images`](/Data/Source_Images/Test_Images) with your own images.
+ If you want to detect trash in your own pictures, replace the trash in [`Data/Source_Images/Test_Images`](/TrainYourOwnYOLO/Data/Source_Images/Test_Images) with your own images.
 
 ## Full Start (Training and Inference)
 
 To train your own custom YOLO object detector please follow the instructions detailed in the three numbered subfolders of this repo:
-- [`1_Image_Annotation`](/1_Image_Annotation/),
-- [`2_Training`](/2_Training/) and
-- [`3_Inference`](/3_Inference/).
+- [`1_Image_Annotation`](/TrainYourOwnYOLO/1_Image_Annotation/),
+- [`2_Training`](/TrainYourOwnYOLO/2_Training/) and
+- [`3_Inference`](/TrainYourOwnYOLO/3_Inference/).
  
 **To make everything run smoothly it is highly recommended to keep the original folder structure of this repo!**
 
