@@ -73,7 +73,7 @@ pip install -r requirements.txt
 If this fails, you may have to upgrade your pip version first with `pip install pip --upgrade`.
 
 ## Quick Start (Inference only)
-To test the trash detector on test images located in [`TrainYourOwnYOLO/Data/Source_Images/Test_Images`](/Data/Source_Images/Test_Images) run the `Minimal_Example.py` script in the root folder with:
+To test the trash detector on test images located in [`TrainYourOwnYOLO/Data/Source_Images/Test_Images`](TrainYourOwnYOLO/Data/Source_Images/Test_Images), first download the models from [here](https://drive.google.com/file/d/1D6ohBVMRIQ35OTQaPL5VOZhzfM9FcakO/view?usp=sharing), copy the model files (either the full or the tiny model) from their respective directory to [`TrainYourOwnYOLO/Data/Model_Weights`](TrainYourOwnYOLO/Data/Model_Weights) (e.g. `scp ~/Desktop/Models/Tiny\ YOLO\ Model/* ~/Desktop/BachelorThesis/TrainYourOwnYOLO/Data/Model_Weights`) and then run the `Minimal_Example.py` script in the root folder with:
 
 ```
 python Minimal_Example.py
@@ -126,47 +126,3 @@ Unless explicitly stated otherwise at the top of a file, all code is licensed un
     snap install --dangerous vott-2.1.0-linux.snap
     ```
     See [Snap Tutorial](https://tutorials.ubuntu.com/tutorial/advanced-snap-usage#2) for more information.
-
-## Need more help? File an Issue!
-If you would like to file an issue, please use the provided issue template and make sure to complete all fields. This makes it easier to reproduce the issue for someone trying to help you. 
-
-![Issue](/Utils/Screenshots/Issue.gif)
-
-Issues without a completed issue template will be closed after 7 days. 
-
-## Stay Up-to-Date
-
-- ⭐ **star** this repo to get notifications on future improvements and
-- 🍴 **fork** this repo if you like to use it as part of your own project.
-
-![CatVideo](/Utils/Screenshots/CatVideo.gif)
-
-## Licensing 
-This work is licensed under a [Creative Commons Attribution 4.0 International
-License][cc-by]. This means that you are free to:
-
- * **Share** — copy and redistribute the material in any medium or format
- * **Adapt** — remix, transform, and build upon the material for any purpose, even commercially.
-
-Under the following terms:
-
- * **Attribution** 
- 
- Cite as:
- 
-  ```
-  @misc{TrainYourOwnYOLO,
-    title={TrainYourOwnYOLO: Building a Custom Object Detector from Scratch},
-    author={Anton Muehlemann},
-    year={2019},
-    url={https://github.com/AntonMu/TrainYourOwnYOLO}
-  }
-  ```
-If your work doesn't include a citation list, simply link this [github repo](https://github.com/AntonMu/TrainYourOwnYOLO)!
- 
-[![CC BY 4.0][cc-by-image]][cc-by]
-
-[cc-by]: http://creativecommons.org/licenses/by/4.0/
-[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
-[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
-
